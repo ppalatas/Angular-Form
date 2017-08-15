@@ -1,0 +1,14 @@
+<div class="main">
+  <div class='header'>Remove Or Add Hobbies</div>
+  <form class="input-wrapper" (submit)="addHobby()">
+    <input class="add-item" type="text" placeholder="Add Your Hobbies"#hobby>
+    <button class="add" (click)="addHobby(hobby.value)">Add</button>
+  </form>
+  <div class="hobbies-wrapper">
+    <ul>
+      <li class="hobbies-li" *ngFor="let hobby of hobbies; let i = index">{{hobby}}
+        <button class="delete" (click)="deleteHobby(hobby)">X</button>
+      </li>
+    </ul>
+  </div>
+</div>
